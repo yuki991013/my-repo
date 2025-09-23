@@ -4,7 +4,5 @@ jobs:                             # ジョブの定義
   hello:                          # ジョブID
     runs-on: ubuntu-latest        # ランナー（Ubuntuで実行）
     steps:                        # ステップの定義
-      - run: |
-        echo "Hello, world"
-        echo $PWD  
+      - run: echo $PWD  
       - uses: actions/checkout@v4 # アクションの呼び出し
