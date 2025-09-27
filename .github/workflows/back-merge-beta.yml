@@ -1,0 +1,6 @@
+name: Back Merge to Beta
+
+on:
+  push:
+    branches:
+      - main
