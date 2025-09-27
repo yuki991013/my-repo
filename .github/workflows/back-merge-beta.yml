@@ -14,7 +14,13 @@ jobs:
         with:
           ref: beta
           fetch-depth: 0
-          
+      
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+      
+      - name: Merge main to beta
         run: |
           git checkout beta
           git merge main
