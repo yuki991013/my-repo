@@ -1,6 +1,17 @@
-name: Back Merge to Beta
+name: Merge main to beta
 
 on:
   push:
     branches:
       - main
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Merge main to beta
+        run: |
+          git checkout beta
+          git merge main
+          git push origin beta
