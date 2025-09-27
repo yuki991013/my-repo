@@ -10,7 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Merge main to beta
+        name: Merge main to beta
+        with:
+          ref: beta
+          fetch-depth: 0
         run: |
           git checkout beta
           git merge main
