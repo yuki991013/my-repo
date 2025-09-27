@@ -14,6 +14,7 @@ jobs:
         with:
           ref: beta
           fetch-depth: 0
+          
         run: |
           git checkout beta
           git merge main
