@@ -22,6 +22,7 @@ jobs:
       
       - name: Merge main to beta
         run: |
-          git checkout beta
-          git merge main
+          git branch
+          git fetch origin main
+          git merge origin/main
           git push origin beta
